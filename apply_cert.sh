@@ -97,5 +97,5 @@ if [ $? -eq 0 ]; then
         chmod 755 $certPath
     fi
 else
-     LOGI "证书已安装"
+     exit 1
 fi

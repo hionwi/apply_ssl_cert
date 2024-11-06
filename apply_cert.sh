@@ -78,7 +78,7 @@ if [ $? -eq 0 ]; then
     fi
     ~/.acme.sh/acme.sh --installcert -d ${CF_Domain} -d *.${CF_Domain} --ca-file /root/cert/ca.cer \
     --cert-file /root/cert/${CF_Domain}.cer --key-file /root/cert/${CF_Domain}.key \
-    --fullchain-file /root/cert/fullchain.cer
+    --fullchain-file /root/cert/fullchain.cer --force
     if [ $? -ne 0 ]; then
         LOGE "证书安装失败,脚本退出"
         exit 1
